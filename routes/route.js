@@ -18,7 +18,7 @@ router.get('/viewTodo/:id', alltodoController);
 router.post('/logout', (req, res) => {
   res.clearCookie('todoCookie', {
     httpOnly: true,
-    secure: false,
+    secure: true,
     sameSite: 'strict',
   });
 
